@@ -161,7 +161,7 @@ module data_cache #(
             end
 
             MISS: begin
-                // Handle cache miss as before
+                // Handle cache miss
                 if (~valid_wayA[cpu_addr[`INDEX_BITS]]) begin
                     data_wayA[cpu_addr[`INDEX_BITS]] <= mem_din;
                     tag_wayA[cpu_addr[`INDEX_BITS]] <= cpu_addr[`TAG_BITS];
